@@ -2,9 +2,9 @@
 A decentralized lottery using Chainlink VRF.
 
 ## Security Considerations
-    - `setWinner()` has a private visibility such as that the only caller that can set the winner is the `fulfillRandomWords()`.
-    - `withdrawal()` is a pull pattern which eliminates the chance of re-entrancy.
-    - This contract uses the ChainLink VRF as source of randomness because blockchain's deterministic property makes it impossible to use block properties as source of randomness.
+- `setWinner()` has a private visibility such as that the only caller that can set the winner is the `fulfillRandomWords()`.
+- `withdrawal()` is a pull pattern which eliminates the chance of re-entrancy.
+- This contract uses the ChainLink VRF as source of randomness because blockchain's deterministic property makes it impossible to use block properties as source of randomness.
 
 
 ## Gas Optimizations
