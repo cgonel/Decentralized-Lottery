@@ -9,7 +9,7 @@ A decentralized lottery using Chainlink VRF.
 
 ## Gas Optimizations
 - The contract was compiled with the runs parameter set at 200 as to make it cheaper to call the contract's function.
-- The state variables are strategically placed such that the first group occupies one slot with 241 bytes. The second group each variable occupies a slot on its own.
+- The state variables are strategically placed such that the first group occupies one slot with 241 bits. The second group each variable occupies a slot on its own.
 - `enterLottery()` and  `withdrawal()` have their visibility set to external making them cheaper to call then if they were public function. Plus, they were set as is because they will only ever be called outside the contract.</li>
 - `enterLottery()` only allows to enter the lottery with the correct amount, thus it eliminates unnecessary code to tranfer the excess back to the caller.
 - The second require in `withdrawal()` uses short-circuiting since it is most likely to be called by the winner.
